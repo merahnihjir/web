@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- CSS Kel 12 -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .navbar {
+        position: relative;
+        z-index: 1;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    .nav-top{
+        background-color: #7a3081;
+    }
+    .navbar-brand {
+        font-size: 32px;
+    }
+
+    .container-fluid{
+        background-color: #f5f5f5;
+        height: 100%;
+        padding-top: 15px;
+    }
+
+    a{
+        color: #7a3081; 
+    }
+    a:hover{
+        color: #f0912b;
+    }
+
+    .login-area{
+        align-items: center;
+    }
+    .form-control{
+        margin-bottom: 20px;
+        background: none;  
+        color: #202020;
+        box-shadow: none;
+    }
+    .form-control:focus{
+        background: none;
+        color: #202020;
+        border-color: #f0912b;
+        box-shadow: none;
+    }
+    .form-control::placeholder{
+        color: rgba(0, 0, 0, 0.568);
+    }
+
+    .btn-signin{
+        background-color: #f0912b;
+        color: #fff;
+        height: 40px;
+        width: 110px;
+    }
+    .btn-signin:hover{
+        background-color: #b87023;
+    }
+
+    #dosen2{
+        display: none;
+    }
+
+    .page-link{
+        color: #202020;
+    }
+    .page-link:hover{
+        color: #f0912b;
+    }
+    .page-item.active .page-link {
+        z-index: 1;
+        color: #fff;
+        background-color: #f0912b;
+        border: none;
+    }
+
+
+    /* DESKTOP VERSION */
+    @media (min-width: 992px) {
+        .navbar-brand {
+            color: white !important;
+        }
+    }
+
+    /* MOBILE VERSION */
+    @media (max-width: 991px) {
+
+   }
+   @media (max-width: 400px){
+
+    }
+    </style>
+    <title>Universitas AMIKOM YOGYAKARTA</title>
+  </head>
+  <body>
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark nav-top navbar-shrink">
+        <a class="navbar-brand" href="index.html"><img width="150px" src="img/logo-univ-amikom.png" alt="logo"></a>
+    </nav>
+  <!-- Akhir Navbar -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 mb-4">
+                    <div class="card py-2 login-area">
+                        <div class="card-body">
+                            <div class="text-center mb-4">
+                            <h2 class="h4">LOGIN AREA</h2>
+                            <img src="img/noprofilepic.png" class="mb-3" alt="">
+
+                            <form class="form-signin" method="POST" action="mhs-dashboard.html">
+                                <input type="text" id="userid" class="form-control" placeholder="user id" required="" autofocus="">
+                                <input type="password" id="pwd" class="form-control" placeholder="password" required="">
+                                <button class="btn btn-signin btn-sm mb-3" type="submit">LOGIN</button>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card card-overview py-2">
+                        <div class="card-body">
+                        <div class="row" id="dosen1">
+                            <div class="col-lg">
+                            <table class="table table-sm table-striped .table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th width="50" scope="col">No.</th>
+                                        <th scope="col">NAMA DOSEN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td><a href="dosen-item.html">Abdiansah, S.Kom., M.Cs.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td><a href="">Abidarin Rosidi, Dr, M.Ma.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td><a href="">Achmad Fauzan, Dr. M.M</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td><a href="">Achmad Fauzi, SE, M.M., Dr.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td><a href="">Acihmah Sidauruk, M.Kom</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td><a href="">Adi Djayusman, S.Kom</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">7</th>
+                                        <td><a href="">Aditya Maulana Hasymi, S.IP., M.A</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">8</th>
+                                        <td><a href="">Aditya Rizki Yudiantika, ST, M.Eng</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">9</th>
+                                        <td><a href="">Adrian, MT</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td><a href="">Afiuddin Ahmadi, S.T.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">11</th>
+                                        <td><a href="">Afrig Aminuddin, S.Kom., M.Eng</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">12</th>
+                                        <td><a href="">Afrinia Lisditya Permatasari, S.Si, M.Sc</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">13</th>
+                                        <td><a href="">Agit Amrullah, S.Kom., M.Kom</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">14</th>
+                                        <td><a href="">Agung Nugroho, M.Kom</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">15</th>
+                                        <td><a href="">Agung Nugroho, S.T.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">16</th>
+                                        <td><a href="">Agung Pambudi,ST, M.A</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">17</th>
+                                        <td><a href="">Agung Yulianto Nugroho</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">18</th>
+                                        <td><a href="">Agus Fatkhurohman, M.Kom</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">19</th>
+                                        <td><a href="">Agus Harjoko, Drs, Msc. Ph. D</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">20</th>
+                                        <td><a href="">Agus Mulyanto, S.Si, M.Kom</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            <div class="col-lg">
+                            <table class="table table-sm table-striped .table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th width="50" scope="col">No.</th>
+                                        <th scope="col">NAMA DOSEN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">21</th>
+                                        <td><a href="">Alfie Nur Rahmi, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">22</th>
+                                        <td><a href="">Alfriadi Dwi Atmoko, SE.Ak., M.Akt., CA</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">23</th>
+                                        <td><a href="">Ali Mustopa, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">24</th>
+                                        <td><a href="">Amir Fatah Sofyan, S.T., M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">25</th>
+                                        <td><a href="">Andi Sunyoto, M.Kom</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">26</th>
+                                        <td><a href="">Andika Agus Slameto, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">27</th>
+                                        <td><a href="">Andriyan Dwi Putra, M.Kom</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">28</th>
+                                        <td><a href="">Angga Intuery, S.Sos., M.Ikom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">29</th>
+                                        <td><a href="">Anggit Dwi Hartanto, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">30</th>
+                                        <td><a href="">Anggrismono, S.E., M.Ec.Dev</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">31</th>
+                                        <td><a href="">Ani Hastuti Arthasari, S.T., M.Sc</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">32</th>
+                                        <td><a href="">Anik Sri Widawati, S.Sos.,M.M.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">33</th>
+                                        <td><a href="">Anna Baita, M.Kom</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">34</th>
+                                        <td><a href="">Ardiyati, S.IP, M.PA.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">35</th>
+                                        <td><a href="">Arief Setyanto,S.Si., M.T., Ph.D.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">36</th>
+                                        <td><a href="">Arif Akbarul Huda, S.Si., M.Eng.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">37</th>
+                                        <td><a href="">Arif Dwi Laksito, M.Kom</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">38</th>
+                                        <td><a href="">Arifiyanto Hadinegoro, S.Kom., M.T</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">39</th>
+                                        <td><a href="">Armadyah Amborowati, S.Kom., M.Eng.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">40</th>
+                                        <td><a href="">Aryanto Yuniawan, S.Kom.</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+
+                        <div class="row" id="dosen2">
+                            <div class="col-lg">
+                            <table class="table table-sm table-striped .table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th width="50" scope="col">No.</th>
+                                        <th scope="col">NAMA DOSEN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">41</th>
+                                        <td><a href="">Asro Nasiri, Drs., M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">42</th>
+                                        <td><a href="">Atik Nurmasani, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">43</th>
+                                        <td><a href="">Atika Fatimah S.E., M.Ec.Dev.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">44</th>
+                                        <td><a href="">Audith M. Turmudhi, Drs., M.M.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">45</th>
+                                        <td><a href="">Ayub Pramono, S.H.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">46</th>
+                                        <td><a href="">Ayuni Fitria, S.Pd., M.Hum.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">47</th>
+                                        <td><a href="">B. Herry Suharto, S.T, M.T.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">48</th>
+                                        <td><a href="">Bagus Ramadhan, S.T. M.Eng.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">49</th>
+                                        <td><a href="">Baldric Siregar, Dr., M.B.A, AK.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">50</th>
+                                        <td><a href="">Bambang Soedijono W. A., Prof. Dr.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">51</th>
+                                        <td><a href="">Bambang Sudaryatno, Drs., M.M.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">52</th>
+                                        <td><a href="">Banu Santoso, S.T, M.Eng.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">53</th>
+                                        <td><a href="">Barka Satya, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">54</th>
+                                        <td><a href="">Bayu Setiaji, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">55</th>
+                                        <td><a href="">Bernadhed, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">56</th>
+                                        <td><a href="">Bety Wulan Sari, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">57</th>
+                                        <td><a href="">Bhanu Sri Nugraha, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">58</th>
+                                        <td><a href="">Citra Desy Aisyah Alkis, S.T., M.Eng.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">59</th>
+                                        <td><a href="">Dhani Ariatmanto, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">60</th>
+                                        <td><a href="">Didi Wahyu S, Drs., M.M.</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            <div class="col-lg">
+                            <table class="table table-sm table-striped .table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th width="50" scope="col">No.</th>
+                                        <th scope="col">NAMA DOSEN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">61</th>
+                                        <td><a href="">Dina Maulina, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">62</th>
+                                        <td><a href="">Dinda Sukmaningrum, , S.Kom., M.M.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">63</th>
+                                        <td><a href="">Djamilah Busyairoh, Dra., M.M.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">64</th>
+                                        <td><a href="">Dodi Setiawan R, S.Psi., M.B.A.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">65</th>
+                                        <td><a href="">Donni Prabowo, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">66</th>
+                                        <td><a href="">Dony Ariyus, M.Kom..</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">67</th>
+                                        <td><a href="">Dwi Miyanto, S.ST., M.T.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">68</th>
+                                        <td><a href="">Dwi Nurani, M.Kom</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">69</th>
+                                        <td><a href="">Dwi Pela Agustina, S.I.Kom., M.A.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">70</th>
+                                        <td><a href="">Dwiyono Iriyanto, Drs., M.M.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">71</th>
+                                        <td><a href="">Dyah Rosna Yustanti,S.E., Akt., M.Akt.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">72</th>
+                                        <td><a href="">Edy Anan, S.E., M.Ak.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">73</th>
+                                        <td><a href="">Edy Musoffa, Drs.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">74</th>
+                                        <td><a href="">Efrat Tegris, S.S.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">75</th>
+                                        <td><a href="">Eko Boedijanto, M.T.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">76</th>
+                                        <td><a href="">Eko Pramono, S.Si., M.T.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">77</th>
+                                        <td><a href="">Eli Pujastuti, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">78</th>
+                                        <td><a href="">Ema Utami, Prof. Dr., S.Si., M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">79</th>
+                                        <td><a href="">Emha Taufiq Luthfi, S.T, M.Kom.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">80</th>
+                                        <td><a href="">Enny Susana, S.Kom., M.M.</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                      <li class="page-item"><a class="page-link" onclick="showDosen1()">1</a></li>
+                                      <li class="page-item"><a class="page-link" onclick="showDosen2()">2</a></li>
+                                      <li class="page-item"><a class="page-link">3</a></li>
+                                      <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                      </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+  
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        function showDosen1() {
+            var dosen1 = document.getElementById("dosen1");
+            var dosen2 = document.getElementById("dosen2");
+            dosen1.style.display = "flex";
+            dosen2.style.display = "none";
+        }
+        function showDosen2() {
+            var dosen1 = document.getElementById("dosen1");
+            var dosen2 = document.getElementById("dosen2");
+            dosen1.style.display = "none";
+            dosen2.style.display = "flex";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fa/css/all.css">
+    <style>
+        .sidebar{
+            background-color: #7a3081;
+            height: 100vh;
+            font-size: 10pt;
+            position: fixed;
+            box-sizing: border-box;
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 250px;
+            z-index: 2;
+        }
+        .sidebar-heading{
+            color: #bf86c5;
+        }
+
+        .nav-link{
+            color: #ffffff;
+        }
+        .nav-link:hover, .a{
+            background-color: #ff971e;
+            color: #ffffff;
+            transition: 0.5s;
+        }
+        .navbar-toggler-icon {
+           background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        .profilebox{
+            cursor: pointer;
+            padding-bottom: 25px;
+            padding-top: 20px;
+        }
+        .profilebox:hover{
+            background-color: #a548ad;
+        }
+        .profilepic{
+            width: 130px;
+            height: 130px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        .profilepic img{
+            display: inline;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .profilepic-mini{
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-left: auto;
+            float: right;
+        }
+        .profilepic-mini img{
+            display: inline;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .dropdown-profil{
+            margin-left: auto; 
+            float: right; 
+            list-style-type: none;
+        }
+        .dropdown-profil-alt{
+            color: #ffffff;
+            display: none;
+        }
+
+        .btn-logout{
+            display: inline;
+        }
+
+        .nav-bot{
+            background-color: #7a3081;
+            display: flex;
+            flex-flow: row wrap;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+        .nav-bot .navbar-collapse{
+            visibility: hidden;
+        }
+
+        .content{
+            margin-left: 250px;
+            margin-top: 56px;
+            background-color: #f5f5f5;  
+            height: 100%;
+        }
+
+        .card-overview{
+            border-width: 0px 0px 5px 0px;
+            border-color: #ff971e;
+        }
+
+        .tabel{
+            font-size: 10pt;
+            overflow-x: auto;
+        }
+        .table{
+            background-color: #ffffff;
+        }
+        @media (max-width: 991px) {
+            .nav-bot .navbar-collapse{
+                visibility: visible;
+            }
+            .sidebar{
+                visibility: hidden;
+            }
+            .content{
+                margin-left: 0px;
+            }
+            .btn-logout{
+                visibility: hidden;
+                display: none;
+            }
+        }
+        @media (max-width: 575px) {
+            .profilepic-mini{
+                visibility: hidden;
+                display: none;
+            }
+            .dropdown-profil-alt{
+                display: inline;
+            }
+        }
+    </style>
+  </head>
+  <body>
+        <nav class="navbar nav-bot navbar-expand-sm">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarsExample02">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownKuliah" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kuliah</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownKuliah">
+                            <a class="dropdown-item" href="#">Kartu Rencana Studi</a>
+                            <a class="dropdown-item" href="#">Kartu Hasil Studi</a>
+                            <a class="dropdown-item" href="#">Transkrip Nilai</a>
+                            <a class="dropdown-item" href="#">Pendadaran</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownPerpustakaan" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Perpustakaan</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownPerpustakaan">
+                            <a class="dropdown-item" href="#">Pinjaman Aktif</a>
+                            <a class="dropdown-item" href="#">Riwayat Pinjaman</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pembayaran</a>
+                    </li>
+                </ul>
+                <li class="nav-item dropdown dropdown-profil">
+                    <a href="#" id="dropdownProfil" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="profilepic-mini">
+                            <img src="img/Yona2018.jpg" alt="profilpic">
+                        </div>
+                        <h6 class="dropdown-profil-alt">17.11.1659</h6>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownProfil">
+                        <a class="dropdown-item" href="#">Profil</a>
+                        <a class="dropdown-item" href="mhs-login.html">Logout</a>
+                    </div>
+                </li>
+            </div>
+            <a class="btn btn-danger btn-logout" href="mhs-login.html"><i class="fas fa-sign-out-alt fa-sm"></i></a>
+        </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="d-block navbar-dark sidebar">
+                <div class="text-center profilebox text-light">
+                    <div class="profilepic">
+                        <img src="img/Yona2018.jpg" alt="">
+                    </div>
+                    <h4>Viviyona Apriani</h4>
+                    <h6>17.11.1659</h6>
+                </div>
+
+                    <a class="nav-item nav-link a" href="#">Dashboard</a>
+
+                <h6 class="sidebar-heading justify-content-between px-3 mt-4 mb-1">
+                <i class="fas fa-graduation-cap fa-lg mr-1"></i>
+                <span>Kuliah</span>
+                </h6>
+                    <a class="nav-item nav-link" href="#">Kartu Rencana Studi</a>
+                    <a class="nav-item nav-link" href="#">Kartu Hasil Studi</a>
+                    <a class="nav-item nav-link" href="#">Transkrip Nilai</a>
+                    <a class="nav-item nav-link" href="#">Pendadaran</a>
+
+                <h6 class="sidebar-heading justify-content-between px-3 mt-4 mb-2">
+                <i class="fas fa-book-open fa-lg mr-1"></i>
+                <span>Perpustakaan</span>
+                </h6>
+                    <a class="nav-item nav-link" href="#">Pinjaman Aktif</a>
+                    <a class="nav-item nav-link" href="#">Riwayat Pinjaman</a>
+
+                <h6 class="sidebar-heading justify-content-between px-3 mt-4 mb-2">
+                <i class="fas fa-money-bill fa-lg mr-1"></i>
+                <span>Pembayaran</span>
+                </h6>
+                    <a class="nav-item nav-link" href="#">Cara Pembayaran</a>
+                    <a class="nav-item nav-link" href="#">Virtual Account</a>
+            </nav>
+
+            <div class="container-fluid content py-3">
+                <h6 class="text-uppercase mb-3">dashboard mahasiswa</h6>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLongTitle">Pengingat</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    Anda memiliki waktu 5 hari lagi untuk menyelesaikan pembayaran anda
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>   
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="card card-overview py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                <div class="col-auto pl-2">
+                                    <i class="fas fa-check fa-2x" style="color: #ff971e;"></i>
+                                </div>
+                                <div class="col ml-5">
+                                    <div class="text-xs font-weight-bold text-uppercase mb-1" style="color: #9b9b9b;">Status Mahasiswa</div>
+                                    <div class="h3 mb-0 font-weight-bold">AKTIF</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="card card-overview py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                <div class="col-auto pl-2">
+                                    <i class="fas fa-trophy fa-2x" style="color: #ff971e;"></i>
+                                </div>
+                                <div class="col ml-5">
+                                    <div class="text-xs font-weight-bold text-uppercase mb-1" style="color: #9b9b9b;">ipk</div>
+                                    <div class="h3 mb-0 font-weight-bold">4.01</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="card card-overview py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                <div class="col-auto pl-2">
+                                    <i class="fas fa-book fa-2x" style="color: #ff971e;""></i>
+                                </div>
+                                <div class="col ml-5">
+                                    <div class="text-xs font-weight-bold text-uppercase mb-1"  style="color: #9b9b9b;">sks</div>
+                                    <div class="h3 mb-0 font-weight-bold">72</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-3 mb-4 tabel">
+                    <table class="table table-striped .table-responsive">
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="6">Jadwal Kuliah</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">HARI</th>
+                                <th scope="col">JAM</th>
+                                <th scope="col">RUANG</th>
+                                <th scope="col">MATA KULIAH</th>
+                                <th scope="col">DOSEN PENGAMPU</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>SENIN</td>
+                                <td>15.30 - 17.10</td>
+                                <td>06.06.06</td>
+                                <td>ST084 - PEMROGRAMAN WEB (Teori)</td>
+                                <td>Firman Asharudin, S.Kom, M.Kom</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>SELASA</td>
+                                <td>15.30 - 17.10</td>
+                                <td>06.06.06</td>
+                                <td>ST084 - PEMROGRAMAN WEB (Teori)</td>
+                                <td>Firman Asharudin, S.Kom, M.Kom</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>RABU</td>
+                                <td>15.30 - 17.10</td>
+                                <td>06.06.06</td>
+                                <td>ST084 - PEMROGRAMAN WEB (Teori)</td>
+                                <td>Firman Asharudin, S.Kom, M.Kom</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row px-3 tabel">
+                    <table class="table table-striped .table-responsive">
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="7">Jadwal Ujian</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">TANGGAL UJIAN</th>
+                                <th scope="col">JAM</th>
+                                <th scope="col">RUANG</th>
+                                <th scope="col">MATA KULIAH</th>
+                                <th scope="col">KURSI</th>
+                                <th scope="col">KEHADIRAN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>02-02-2020</td>
+                                <td>15.30</td>
+                                <td>06.06.06</td>
+                                <td>ST084 - PEMROGRAMAN WEB</td>
+                                <td>13</td>
+                                <td>HADIR</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>02-02-2020</td>
+                                <td>15.30</td>
+                                <td>06.06.06</td>
+                                <td>ST084 - PEMROGRAMAN WEB</td>
+                                <td>13</td>
+                                <td>HADIR</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>02-02-2020</td>
+                                <td>15.30</td>
+                                <td>06.06.06</td>
+                                <td>ST084 - PEMROGRAMAN WEB</td>
+                                <td>13</td>
+                                <td>TIDAK</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(window).on('load',function(){
+            $('#myModal').modal('show');
+        });
+    </script>
+</body>
+</html>

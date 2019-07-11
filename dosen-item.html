@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- CSS Kel 12 -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .navbar {
+        position: relative;
+        z-index: 1;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    .nav-top{
+        background-color: #7a3081;
+    }
+    .navbar-brand {
+        font-size: 32px;
+    }
+
+    .container-fluid{
+        background-color: #f5f5f5;
+        height: 100%;
+        padding-top: 15px;
+    }
+
+    .profilepic{
+        width: 150px;
+    }
+
+    .thead-dark th{
+        background-color: #f0912b !important;
+    }
+
+    .linknav{
+        color: #7a3081 !important;
+        cursor: pointer;
+    }
+
+    #riwayat{
+        display: flex;
+    }
+    #perkuliahan{
+        display: none;
+    }
+    #jadwal{
+        display: none;
+    }
+    #karyatulis{
+        display: none;
+    }
+
+    /* DESKTOP VERSION */
+    @media (min-width: 992px) {
+        .navbar-brand {
+            color: white !important;
+        }
+    }
+
+    /* MOBILE VERSION */
+    @media (max-width: 567px){
+        .profilepic{
+            display: none;
+        }
+    }
+    </style>
+    <title>Universitas AMIKOM YOGYAKARTA</title>
+  </head>
+  <body>
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark nav-top navbar-shrink">
+        <a class="navbar-brand" href="index.html"><img width="150px" src="img/logo-univ-amikom.png" alt="logo"></a>
+    </nav>
+  <!-- Akhir Navbar -->
+
+  <!-- Container -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col mb-4">
+                <!-- Profil Dosen -->
+                <div class="card py-2 login-area">
+                    <div class="card-body px-5">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <img class="profilepic"src="img/firman.jpg" alt="">
+                            </div>
+                            <div class="col py-4">
+                                <h3>Firman Asharudin, S.Kom, M.Kom</h2>
+                                <h5 class="text-muted">Firman_asharudin@amikom.ac.id</h4>
+                                <h5>Jalan Ring Road Utara (Padjajaran) , Condong Catur, Depok, Sleman, Yogyakarta</h5>
+                            </div>
+                            <div class="col">
+                                <table class="table table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td>Email Alternatif</td>
+                                            <td>[private]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mobile</td>
+                                            <td>[private]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Personal Blog</td>
+                                            <td>blabla.com </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sinopsis</td>
+                                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                                Consequatur sit consectetur quae officia ipsum.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riwayat Dosen -->
+        <div class="row" id="riwayat">
+            <div class="col mb-4">
+                <div class="card py-2 login-area">
+                    <div class="card-body">
+                        <div>
+                            <a href="#riwayat" class="linknav" onclick="showRiwayat()">Riwayat</a> |
+                            <a href="#perkuliahan" class="linknav" onclick="showPerkuliahan()">Perkuliahan</a> |
+                            <a href="#jadwal" class="linknav" onclick="showJadwal()">Jadwal Mengajar</a> |
+                            <a href="#karyatulis" class="linknav" onclick="showKaryatulis()">Karya Tulis</a>
+                        </div>
+                        <div class="row">
+                            <div class="col pt-4">
+                                <table class="table table-borderless">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th colspan="2">Riwayat Pendidikan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2007 - 2008</td>
+                                            <td>LPK Unigama</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008 - 2012</td>
+                                            <td>STMIK AMIKOM Yogyakarta (S1)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012 - 2014</td>
+                                            <td>STMIK AMIKOM Yogyakarta (S2)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col pt-4">
+                                <table class="table table-borderless">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th colspan="2">Riwayat Pendidikan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2007 - 2008</td>
+                                            <td>LPK Unigama</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008 - 2012</td>
+                                            <td>STMIK AMIKOM Yogyakarta (S1)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012 - 2014</td>
+                                            <td>STMIK AMIKOM Yogyakarta (S2)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pt-4">
+                                <table class="table table-borderless">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th colspan="4">Riwayat Mengajar</th>
+                                        </tr>
+                                    </thead>
+                                    <thead class="thead">
+                                        <tr>
+                                            <th>Tahun</th>
+                                            <th>Semester</th>
+                                            <th>Matakuliah</th>
+                                            <th>Jurusan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="3">2018/2019</td>
+                                            <td>Remidial Ganjil</td>
+                                            <td>PERANCANGAN WEB 2</td>
+                                            <td>Teknik Informatika</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">Genap</td>
+                                            <td>PERANCANGAN WEB 1</td>
+                                            <td>Teknik Informatika</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PEMROGRAMAN WEB</td>
+                                            <td>Informatika</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3">2017/2018</td>
+                                            <td rowspan="2">Ganjil</td>
+                                            <td>PERANCANGAN WEB 2</td>
+                                            <td>Teknik Informatika</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PERANCANGAN WEB 1</td>
+                                            <td>Teknik Informatika</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perkuliahan -->
+        <div class="row" id="perkuliahan">
+            <div class="col mb-4">
+                <div class="card py-2 login-area">
+                    <div class="card-body">
+                        <div>
+                            <a href="#riwayat" class="linknav" onclick="showRiwayat()">Riwayat</a> |
+                            <a href="#perkuliahan" class="linknav" onclick="showPerkuliahan()">Perkuliahan</a> |
+                            <a href="#jadwal" class="linknav" onclick="showJadwal()">Jadwal Mengajar</a> |
+                            <a href="#karyatulis" class="linknav" onclick="showKaryatulis()">Karya Tulis</a>
+                        </div>
+                        <div class="row">
+                            <div class="col pt-4">
+                                <table class="table table-borderless">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th colspan="3">Materi Perkuliahan</th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3" class="text-right">
+                                                <div class="form-row">
+                                                    <div class="form-group col-4">
+                                                        <select class="form-control">
+                                                            <option>--pilih semester--</option>
+                                                            <option>Ganjil</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-4">
+                                                        <select class="form-control">
+                                                            <option>--pilih tahun ajaran--</option>
+                                                            <option>2018/2019</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <thead class="thead">
+                                        <tr>
+                                            <th>Judul Materi</th>
+                                            <th>Tanggal</th>
+                                            <th>Download</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Bootstrap337</td>
+                                            <td>18-12-2017</td>
+                                            <td><a href="">bootstrap.rar</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bootstrap</td>
+                                            <td>18-12-2017</td>
+                                            <td><a href="">Modul12.pdf</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>jQuery</td>
+                                            <td>11-12-2017</td>
+                                            <td><a href="">Modul11.pdf</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col pt-4">
+                                <table class="table table-borderless">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th colspan="3">Nilai Perkuliahan</th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3" class="text-right">
+                                                <div class="form-row">
+                                                    <div class="form-group col-4">
+                                                        <select class="form-control">
+                                                            <option>--pilih semester--</option>
+                                                            <option>Ganjil</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-4">
+                                                        <select class="form-control">
+                                                            <option>--pilih tahun ajaran--</option>
+                                                            <option>2018/2019</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <thead class="thead">
+                                        <tr>
+                                            <th>Judul Materi</th>
+                                            <th>Tanggal</th>
+                                            <th>Download</th>
+                                        </tr>   
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Bootstrap337</td>
+                                            <td>18-12-2017</td>
+                                            <td><a href="">bootstrap.rar</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bootstrap</td>
+                                            <td>18-12-2017</td>
+                                            <td><a href="">Modul12.pdf</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>jQuery</td>
+                                            <td>11-12-2017</td>
+                                            <td><a href="">Modul11.pdf</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jadwal Mengajar -->
+        <div class="row" id="jadwal">
+            <div class="col mb-4">
+                <div class="card py-2 login-area">
+                    <div class="card-body">
+                        <div>
+                            <a href="#riwayat" class="linknav" onclick="showRiwayat()">Riwayat</a> |
+                            <a href="#perkuliahan" class="linknav" onclick="showPerkuliahan()">Perkuliahan</a> |
+                            <a href="#jadwal" class="linknav" onclick="showJadwal()">Jadwal Mengajar</a> |
+                            <a href="#karyatulis" class="linknav" onclick="showKaryatulis()">Karya Tulis</a>
+                        </div>
+                        <div class="row">
+                            <div class="col pt-4">
+                                <table class="table table-borderless">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th colspan="5">Jadwal Mengajar</th>
+                                        </tr>
+                                    </thead>
+                                    <thead class="thead">
+                                        <tr>
+                                            <th>Hari</th>
+                                            <th>Jam</th>
+                                            <th>Mata Kuliah</th>
+                                            <th>Kelas</th>
+                                            <th>Ruang</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Kamis</td>
+                                            <td>15.30 - 17.10</td>
+                                            <td>Perancangan Web 1</td>
+                                            <td>18-D3TI-01</td>
+                                            <td>L 2.4.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sabtu</td>
+                                            <td>08.50 - 10.30</td>
+                                            <td>Perancangan Web 1</td>
+                                            <td>18-D3TI-02</td>
+                                            <td>L 2.4.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sabtu</td>
+                                            <td>12.30 - 14.10</td>
+                                            <td>Pemrograman Web</td>
+                                            <td>17-SIIF-11</td>
+                                            <td>L 2.4.1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Karya Tulis -->
+        <div class="row" id="karyatulis">
+                <div class="col mb-4">
+                    <div class="card py-2 login-area">
+                        <div class="card-body">
+                            <div>
+                                <a href="#riwayat" class="linknav" onclick="showRiwayat()">Riwayat</a> |
+                                <a href="#perkuliahan" class="linknav" onclick="showPerkuliahan()">Perkuliahan</a> |
+                                <a href="#jadwal" class="linknav" onclick="showJadwal()">Jadwal Mengajar</a> |
+                                <a href="#karyatulis" class="linknav" onclick="showKaryatulis()">Karya Tulis</a>
+                            </div>
+                            <div class="row">
+                                <div class="col pt-4">
+                                    <table class="table table-borderless">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th colspan="5">Karya Tulis</th>
+                                            </tr>
+                                        </thead>
+                                        <thead class="thead">
+                                            <tr>
+                                                <th colspan="5">Belum ada karya tulis yang disubmit. </th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+  
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        function showRiwayat() {
+            var riwayat = document.getElementById("riwayat");
+            var perkuliahan = document.getElementById("perkuliahan");
+            var jadwal = document.getElementById("jadwal");
+            var karyatulis = document.getElementById("karyatulis");
+            riwayat.style.display = "flex";
+            perkuliahan.style.display = "none";
+            jadwal.style.display = "none";
+            karyatulis.style.display = "none";
+        }
+        function showPerkuliahan() {
+            var riwayat = document.getElementById("riwayat");
+            var perkuliahan = document.getElementById("perkuliahan");
+            var jadwal = document.getElementById("jadwal");
+            var karyatulis = document.getElementById("karyatulis");
+            riwayat.style.display = "none";
+            perkuliahan.style.display = "flex";
+            jadwal.style.display = "none";
+            karyatulis.style.display = "none";
+        }
+        function showJadwal() {
+            var riwayat = document.getElementById("riwayat");
+            var perkuliahan = document.getElementById("perkuliahan");
+            var jadwal = document.getElementById("jadwal");
+            var karyatulis = document.getElementById("karyatulis");
+            riwayat.style.display = "none";
+            perkuliahan.style.display = "none";
+            jadwal.style.display = "flex";
+            karyatulis.style.display = "none";
+        }
+        function showKaryatulis() {
+            var riwayat = document.getElementById("riwayat");
+            var perkuliahan = document.getElementById("perkuliahan");
+            var jadwal = document.getElementById("jadwal");
+            var karyatulis = document.getElementById("karyatulis");
+            riwayat.style.display = "none";
+            perkuliahan.style.display = "none";
+            jadwal.style.display = "none";
+            karyatulis.style.display = "flex";
+        }
+    </script>
+</body>
+</html>

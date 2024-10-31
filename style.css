@@ -1,5 +1,5 @@
       .text-primary {
-        color: #7a3081 !important;
+        color: #ffffff !important;
       }
       .text-secondary{
         color: #ff971e !important;
@@ -68,7 +68,7 @@
  
       /* Navbar */
       .nav-side {
-        background-color: #7a3081;
+        background-color: #ffffff;
       }
       .navbar {
         position: relative;
@@ -154,7 +154,7 @@
         display: block;
         width: 80%;
         height: 100%;
-        background-image: linear-gradient(to right, #7a3081, rgba(0,0,0,0));
+        background-image: linear-gradient(to right, #ffffff, rgba(0,0,0,0));
         position: absolute;
         bottom: 0;
       }

@@ -161,7 +161,7 @@
 
       /* Button */
       .tombol {
-        background-color: #ff971e;
+        background-color: #ff0000;
         text-transform: uppercase;
         border-radius: 20px;
         color: white;
@@ -170,7 +170,7 @@
       }
 
       .tombol-al {
-        background-color: #ff971e;
+        background-color: #ff0000;
         text-transform: uppercase;
         color: white;
         font-family: sans-serif;
@@ -189,10 +189,10 @@
       }
 
       .tombol:hover {
-          color: #fff;
+          color: #000000;
       }
       .tombol-al:hover {
-        color: #fff;
+        color: #000000;
       }
 
       /* Berita */
@@ -225,7 +225,7 @@
 
         /* Agenda */
         .agenda{
-            background-color: #414141;
+            background-color: #ff000000;
             padding-top: 10px;
             padding-bottom: 8px;
         }

@@ -169,7 +169,7 @@
         background-color: #ff0000;
         text-transform: uppercase;
         border-radius: 20px;
-        color: white;
+        color: red;
         font-family: sans-serif;
         font-weight: bold;
       }
@@ -177,14 +177,14 @@
       .tombol-al {
         background-color: #ff0000;
         text-transform: uppercase;
-        color: white;
+        color: red;
         font-family: sans-serif;
         font-weight: bold;
 
       }
       
       .show-more, .buka-semua{
-        color: red !important;
+        color: white !important;
         padding:10px;
         text-align:center;
         margin: 20px auto;

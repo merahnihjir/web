@@ -60,16 +60,16 @@
 
         /* Button */
         .tombol {
-            background-color: #ff971e;
+            background-color: #ff0000;
             text-transform: uppercase;
             border-radius: 20px;
-            color: white;
+            color: red;
             font-family: sans-serif;
             font-weight: bold;
         }
 
         .tombol:hover {
-            color: #fff;
+            color: #ff0000;
         }
 
         .section-title {

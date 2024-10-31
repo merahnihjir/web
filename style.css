@@ -93,7 +93,7 @@
 
       /* Jumbotron */
       .jumbotron {
-        background-image: url(img/surdihatera-20190516-0001-mod.jpg);
+        background-image: url(img/jumbotron.jpg);
         background-size: cover;
         height: 396px; 
         position: relative;
@@ -128,7 +128,7 @@
       }
 
         .jumbotron-side {
-        background-image: url(img/bg-all.jpg);
+        background-image: url(img/jumbotron.jpg);
         background-size: cover;
         height: 296px; 
         position: relative;

@@ -184,7 +184,7 @@
       }
       
       .show-more, .buka-semua{
-        color: white !important;
+        color: red !important;
         padding:10px;
         text-align:center;
         margin: 20px auto;

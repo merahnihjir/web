@@ -320,7 +320,7 @@
         .footer-body {
           padding: 48px 0;
           margin-top: 40px;
-          background-color: #7a3081;
+          background-color: #ff0000;
           
           color: #fff;
         }
@@ -335,7 +335,7 @@
         }
 
         .menu a:hover {
-          color: #f0912b;
+          color: #ff0000;
         }
 
         ul{
@@ -354,7 +354,7 @@
         }
 
         .footer-bottom {
-          background-color: #5f2064;
+          background-color: #ff0000;
           color: #fff;
         }
         /* Profil */
@@ -523,7 +523,7 @@
         .nav-top .nav-link:hover::after {
             content: '';
             display: block;
-            border-bottom: 3px solid #f0912b;
+            border-bottom: 3px solid #ff0000;
             width: 100%;
             margin: auto;
             padding-bottom: 5px;
@@ -539,7 +539,7 @@
       /* MOBILE VERSION */
       @media (max-width: 991px) {
         .nav-top{
-          background-color: #7a3081;
+          background-color: #ffffff;
         }
         .content-scroll .card-body{
           display: none;
